@@ -4,6 +4,14 @@ The code behind my PID control report for the Modern Monk Labs internship assign
 The PID logic, plant models, simulation loop and metrics are all hand-written with **NumPy only**.
 There are no control libraries. Matplotlib is used only for plotting.
 
+## Approach
+
+Each part of the assignment is treated as an experiment. I simulate the 1 kg mass-spring-damper
+in Python, predict the result by hand (transfer function, damping ratio ζ, final value), and
+check that the simulated graph matches. A single reusable `PID` class is extended step by step
+with the real-world fixes (output limit, anti-windup, derivative on measurement, derivative filter),
+so the same code demonstrates each problem and its fix.
+
 ## How to run
 
 ```bash
