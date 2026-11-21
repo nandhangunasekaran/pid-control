@@ -86,7 +86,7 @@ def main():
     rows = ex.fig_final_controller()
     md.append(table("Section 9 - Final controller", ["case"] + M, [[r["name"]] + metric_cols(r) for r in rows]))
 
-    with open(os.path.join(RES, "results.md"), "w") as f:
+    with open(os.path.join(RES, "results.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(md))
     print("\nAll done. Tables in results/results.md")
 
